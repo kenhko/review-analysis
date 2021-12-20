@@ -8,4 +8,10 @@ with open('reviews.txt', 'r') as f:
             print(len(data))
         
 
-print(len(data))
+print('Done Read, total comments are', len(data))
+
+sum_len = 0
+for comment in data:
+    sum_len = sum_len + len(comment)
+
+print('In average, the number of wordings of comment are', sum_len/len(data))
